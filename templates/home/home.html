@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block content %}
+    <section class="home-page" id="Home">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-between align-items-center p-3 p-md-5">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="about-text">
+                        <div class="name">
+                            <h1>Hi, I am John Doe</h1>
+                        </div>
+                        <div class="position">
+                            <h2>Backend Developer</h2>
+                        </div>
+                        <div class="cv my-3 d-flex gap-3">
+                            <button class="btn download">Download CV</button>
+                            <button class="btn about-me">About Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="image">
+                        <img src="./static/images/profile_img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aboutme" id="About" style="background-color: #171717">
+        <div class="container-fluid">
+            <h1 class="text-center" style="color: white">About</h1>
+            <div class="about-me-text my-5">
+                <p class="text-center" style="color: white">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, perspiciatis qui! Adipisci animi
+                    at, ducimus eligendi, facere harum, nam odio odit officia provident recusandae voluptatibus.
+                    Accusamus alias animi autem blanditiis consectetur cum ducimus ea earum eligendi, esse et facilis
+                    fugit in itaque iure, laboriosam magni modi neque nulla, odio odit officia officiis placeat qui quia
+                    tempore temporibus unde ut velit voluptatum! Alias commodi dignissimos eius facere id, impedit iure,
+                    labore minus modi mollitia nam nihil officia perferendis porro quam quas quidem sed sequi tenetur
+                    totam unde voluptates, voluptatum! Atque beatae dolorem illo natus nemo nostrum omnis quis
+                    recusandae sunt voluptatum.
+                </p>
+            </div>
+            <div class="row circles">
+                <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center flex-column mb-5">
+                    <div class="circle"></div>
+                    <div class="textes">
+                        <h4>Full Name</h4>
+                        <a href="">John Doe</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center flex-column mb-5">
+                    <div class="circle"></div>
+                    <div class="textes">
+                        <h4>Email Address</h4>
+                        <a href="#">johndoe@info.com</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center flex-column mb-5">
+                    <div class="circle"></div>
+                    <div class="textes">
+                        <h4>Linkedin</h4>
+                        <a href="">johndoe</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex align-items-center justify-content-center flex-column mb-5">
+                    <div class="circle"></div>
+                    <div class="textes">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/SHOXAKONG">github.com/SHOXAKONG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="what-i-do" style="background-color: #171717;" id="Skills">
+        <div class="container-fluid d-flex align-items-center justify-content-center flex-column p-5">
+            <h1 class="my-5" style="color: white; text-align: center;">What I do</h1>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="card p-2 w-100">
+                        <div class="card-body" onclick="toggleInfo(this)">
+                            <div class="dev-logo"><img src="./static/images/SD.png" alt=""></div>
+                            <h5 class="mt-2">Software Development</h5>
+                        </div>
+                        <div class="extra-info">
+                            <p class="p-2">Software development involves coding, debugging, and deploying
+                                applications.</p>
+                        </div>
+                        <a href="https://example.com/software-development" class="btn btn-outline-success mt-2">Read
+                            More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-sm-6 col-lg-4 mb-5">
+                    <div class="card p-2 w-100">
+                        <div class="card-body" onclick="toggleInfo(this)">
+                            <div class="dev-logo"><img src="./static/images/DEV.png" alt=""></div>
+                            <h5 class="mt-2">Web Development</h5>
+                        </div>
+                        <div class="extra-info">
+                            <p class="p-2">Web development involves building websites using HTML, CSS, and
+                                JavaScript.</p>
+                        </div>
+                        <a href="https://example.com/web-development" class="btn btn-outline-success mt-2">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card p-2 w-100">
+                        <div class="card-body" onclick="toggleInfo(this)">
+                            <div class="dev-logo"><img src="./static/images/Coding.png" alt=""></div>
+                            <h5 class="mt-2">DevOps</h5>
+                        </div>
+                        <div class="extra-info">
+                            <p class="p-2">DevOps is a combination of software development and IT operations.</p>
+                        </div>
+                        <a href="https://example.com/devops" class="btn btn-outline-success mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <h1 class="my-5" style="color: white;">My Skills</h1>
+            <div class="row all-skill mx-5">
+                <div class="col-12 d-flex justify-content-around align-items-center text-center">
+                    <div class="skills">
+                        <div class="percent"><h1>65%</h1></div>
+                        <div class="techno-type"><h5>Django</h5></div>
+                    </div>
+                    <div class="skills">
+                        <div class="percent"><h1>30%</h1></div>
+                        <div class="techno-type"><h5>FastAPI</h5></div>
+                    </div>
+                    <div class="skills">
+                        <div class="percent"><h1>20%</h1></div>
+                        <div class="techno-type"><h5>Algorithm & DS</h5></div>
+                    </div>
+                    <div class="skills">
+                        <div class="percent"><h1>10%</h1></div>
+                        <div class="techno-type"><h5>DevOps</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'contact.html' %}
+{% endblock %}

@@ -1,0 +1,236 @@
+@media (max-width: 1399.98px) {
+    .home-page .container-fluid {
+        padding: 40px 0;
+    }
+
+    .home-page .image {
+        width: 500px;
+        height: 500px;
+    }
+
+    .home-page .image img {
+        height: 450px;
+        width: 450px;
+        border-radius: 50%;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 45px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 29px;
+    }
+
+    .what-i-do .card {
+        width: 200px;
+    }
+
+    .aboutme .about-me-text {
+        padding: 0 200px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .home-page .container-fluid {
+        padding: 50px 0;
+    }
+
+    .home-page .image {
+        width: 450px;
+        height: 450px;
+    }
+
+    .home-page .image img {
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 40px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 25px;
+    }
+
+    .what-i-do .card {
+        width: 50%;
+    }
+
+    .aboutme .about-me-text {
+        padding: 0 180px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .home-page .container-fluid {
+        padding: 60px 0;
+    }
+
+
+    .home-page .image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .home-page .image img {
+        height: 350px;
+        width: 350px;
+        border-radius: 50%;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 40px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 25px;
+    }
+
+    .aboutme .about-me-text {
+        padding: 0 150px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .home-page .container-fluid {
+        padding: 50px 0;
+    }
+
+
+    .home-page .image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .home-page .image img {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 35px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 23px;
+    }
+
+    .home-page .cv .download {
+        font-size: 15px;
+        padding: 0;
+        height: 45px;
+    }
+
+    .home-page .cv .about-me {
+        font-size: 15px;
+        padding: 0;
+        height: 45px;
+    }
+
+    .aboutme .about-me-text {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-page .container-fluid .row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+
+    }
+
+    .home-page .image {
+        width: 450px;
+        height: 450px;
+    }
+
+    .home-page .image img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 40px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 25px;
+    }
+
+
+    .aboutme .about-me-text {
+        padding: 0 100px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .home-page .image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .home-page .image img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 35px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 23px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .home-page .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .home-page .image img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 35px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .home-page .image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .home-page .image img {
+        height: 230px;
+        width: 230px;
+    }
+
+    .home-page .about-text h1 {
+        font-size: 32px;
+    }
+
+    .home-page .about-text h2 {
+        font-size: 21px;
+    }
+}

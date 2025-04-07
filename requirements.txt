@@ -1,0 +1,5 @@
+django~=5.1.7
+django-bootstrap5~=25.1
+python-decouple~=3.8
+pillow~=11.1.0
+django-crispy-forms~=2.3

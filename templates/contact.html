@@ -1,0 +1,45 @@
+<section class="contact" style="background-color: #171717" id="Contact">
+    <div class="container">
+        <h1 class="text-center my-5" style="color: white">Get In Touch</h1>
+        {#        <form method="post">#}
+        {#            {% csrf_token %}#}
+        {#            <div class="row">#}
+        {#                <div class="col-6">#}
+        {#                    <input type="text" class="form-control" placeholder="Name" name="first_name" required>#}
+        {#                </div>#}
+        {#                <div class="col-6">#}
+        {#                    <input type="text" class="form-control" placeholder="Last name" name="last_name" required>#}
+        {#                </div>#}
+        {#                <div class="col-6">#}
+        {#                    <input type="email" class="form-control" placeholder="Email" name="email" required>#}
+        {#                </div>#}
+        {#                <div class="col-6">#}
+        {#                    <input type="text" class="form-control" placeholder="Phone Number" name="phone_number" required>#}
+        {#                </div>#}
+        {#                <div class="col-12">#}
+        {#                    <div class="mb-3">#}
+        {#                            <textarea class="form-control" rows="5" placeholder="Message" name="about"#}
+        {#                                      required></textarea>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-12 d-flex justify-content-center my-3">#}
+        {#                    <button class="btn" type="submit">Submit Now</button>#}
+        {#                </div>#}
+        {#                {% if messages %}#}
+        {#                    {% for message in messages %}#}
+        {#                        <div class="alert alert-{{ message.tags }}">#}
+        {#                            {{ message }}#}
+        {#                        </div>#}
+        {#                    {% endfor %}#}
+        {#                {% endif %}#}
+        {#            </div>#}
+        {#        </form>#}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+
+
+    </div>
+</section>
