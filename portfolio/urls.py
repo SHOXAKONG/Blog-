@@ -2,12 +2,16 @@ from django.conf import settings
 from django.urls import path
 from django.conf.urls.static import static
 from . import views
+from .views import PostsView, PostDetailView
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('', views.about, name='about'),
-    path('', views.skills, name='skills'),
-    path('', views.contact, name='contact')
+    path('about/', views.about, name='about'),
+    path('skills/', views.skills, name='skills'),
+    path('contact/', views.contact, name='contact'),
+    path('posts/', PostsView.as_view(), name='posts'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
+    path('download_file/', views.download_file, name='download_file')
 ]
 
 if settings.DEBUG:

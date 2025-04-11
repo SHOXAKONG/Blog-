@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="post_detail" style="background-color: #171717">
+        <div class="container">
+            <div class="post_detail_content d-flex align-items-center justify-content-center flex-column">
+                <h1 class="text-center" style="color: white">
+                    {{ post.title }}
+                </h1>
+                <img src="{{ post.image.url }}" alt="" width="1000px" class="my-3">
+                <div class="white-text">
+                    {{ post.content|safe }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

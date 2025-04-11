@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
-from django.conf.global_settings import AUTH_USER_MODEL
+from django.conf.global_settings import AUTH_USER_MODEL, STATIC_ROOT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common',
     'portfolio',
-    'django_bootstrap5',
-    'crispy_forms'
+    'crispy_forms',
+    'bootstrap5',
+    'django_ckeditor_5'
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
@@ -119,11 +121,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Directory where collected static files will go (e.g., for production)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Changed to 'staticfiles'
 
+# Directory for additional static files during development
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),  # Keep this as your source static directory
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -139,3 +145,5 @@ EMAIL_PORT = config("EMAIL_PORT")
 EMAIL_USE_TLS = config("EMAIL_USE_TLS")
 EMAIL_HOST_USER = config("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+
+CKEDITOR5_FILE_UPLOADS = False

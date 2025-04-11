@@ -1,0 +1,51 @@
+<section class="contact" style="background-color: #171717" id="Contact">
+    <div class="container">
+        <h1 class="text-center my-5" style="color: white">Get In Touch</h1>
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <input type="text" class="form-control bg-transparent" placeholder="Name" name="name" required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <input type="text" class="form-control bg-transparent" placeholder="Last name" name="last_name"
+                           required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <input type="email" class="form-control bg-transparent" placeholder="Email" name="email" required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <input type="text" class="form-control bg-transparent" placeholder="Phone Number"
+                           name="phone_number" required>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <textarea class="form-control bg-transparent" rows="5" placeholder="Message" name="about"
+                                  required></textarea>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center my-3">
+                    <button class="btn w-100" type="submit">Submit Now</button>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </form>
+    </div>
+    <script>
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('focus', () => {
+                setTimeout(() => {
+                    if (input.value !== "") {
+                        input.style.backgroundColor = '#171717';
+                    }
+                }, 100);
+            });
+        });
+    </script>
+</section>
