@@ -10,5 +10,4 @@ function toggleInfo(clickedCard) {
     clickedCard.nextElementSibling.classList.toggle("show");
 }
 
-// JavaScript yordamida autofill bo'lgan inputni aniqlash
 

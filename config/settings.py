@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / config('DB_NAME'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -139,11 +139,10 @@ LOGIN_URL = '/login/'  # Change this based on your login URL
 
 AUTH_USER_MODEL = 'portfolio.User'
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = config("EMAIL_HOST")
-EMAIL_PORT = config("EMAIL_PORT")
-EMAIL_USE_TLS = config("EMAIL_USE_TLS")
-EMAIL_HOST_USER = config("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = "bekmurodovshohruh0224@gmail.com"
+# EMAIL_HOST_PASSWORD = "your-password"
 
-CKEDITOR5_FILE_UPLOADS = False
